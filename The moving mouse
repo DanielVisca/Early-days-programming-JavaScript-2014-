@@ -1,0 +1,131 @@
+var bodySize = 100;
+var faceSize = bodySize/2;
+var x=100;
+var y=575;
+    
+    var draw= function() { 
+y = y - 2.5;
+x = x + 0.5;
+//Repeat    
+if (y === -400){
+    y = 400;}
+if ( x === 500){ x = -100;}
+
+    //background
+    background(85, 0, 255);
+     
+     
+                         //tail
+var tailY=y+301;
+var tailY2=y+375;
+fill(242, 12, 227);
+noStroke();
+    
+
+                        //fix colours
+                        stroke(15,14,14);
+                            //MAIN BODY
+//body variables
+var bodyY=y+175;
+  //colour reset
+                                fill(172,179,174);
+    //body
+    ellipse(x,bodyY,120,200);
+                                  
+
+                                    //Whiskers
+    //Whisker point1 variables
+        var whiskersX=x+7;
+        var whiskersY=y-10;
+    //whiskers point2 variables
+        var pointX=x+50;
+        var pointY=y-20;
+    //whiskers right side
+        //whiskers1
+        line(whiskersX,whiskersY,pointX,pointY);
+        //whisker2
+         line(whiskersX-5,whiskersY-5,pointX-10,pointY-10);
+        //whisker3
+        line(whiskersX,whiskersY+5,pointX+15,pointY+10);
+//whiskers left side
+    //whisker Point1 variables
+        var whiskersX =x-7;
+        var whiskersY=y-10;
+    //whiskers point2 variables
+        var pointX=x-50;
+        var pointY=y-20;
+    //whiskers left side
+        //whisker1
+        line(whiskersX,whiskersY,pointX,pointY);
+         //whisker2
+         line(whiskersX+5,whiskersY-5,pointX+10,pointY-10);
+        //whisker3
+        line(whiskersX,whiskersY+5,pointX-15,pointY+10);
+                        //colour reset
+                        fill(172,179,174);
+                            //EARS
+//ear variables
+var leftEarX=x-40;
+var EarY=y+100;
+var rightEarX=x+40;
+    //left ear
+    ellipse(leftEarX,EarY,50,75);
+    noStroke();
+    fill(242, 12, 227);
+    ellipse(leftEarX,EarY,40,65);
+//colour reset
+    stroke(15,14,14);
+    fill(172,179,174);
+    //right ear
+    ellipse(rightEarX,EarY,50,75);
+    noStroke();
+    fill(242,12,227);
+    ellipse(rightEarX,EarY,40,65);
+                                //colour reset
+                                stroke(15,14,14);
+                                fill(172,179,174);
+                                
+                                //HEAD
+//nose
+fill(255, 31, 240);
+ellipse(x, y+2, faceSize/2, faceSize); // face?
+//Head
+fill(172, 179, 174);
+ellipse(x, y+50, bodySize, bodySize); // body?
+
+                                //EYES
+//Eye variables
+    var leftEyeX= x-17;
+    var leftEyeY=y+20;
+    var rightEyeX=x+17;
+    var rightEyeY=y+20;
+    
+    //leftEye
+        ellipse(leftEyeX,leftEyeY, 20,10);
+         //noStroke
+            noStroke();
+            rect(leftEyeX-10,leftEyeY-10,20,10);
+        //Bold
+            stroke(15, 14, 14);
+            fill(15, 14, 14);
+            ellipse(leftEyeX,leftEyeY,10,10);
+            //reset colour
+            fill(172,179,174);
+    //rightEye
+        ellipse(rightEyeX,rightEyeY,20,10);
+        //noStroke
+            noStroke();
+            rect(rightEyeX-10,rightEyeY-10,20,10);
+        //Bold
+            stroke(15, 14, 14);
+            fill(15, 14, 14);
+            ellipse(rightEyeX,leftEyeY,10,10);
+            //reset colour
+            fill(172,179,174);
+            
+   
+                    
+        
+    };
+
+   
